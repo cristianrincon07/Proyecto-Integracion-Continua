@@ -11,9 +11,9 @@ pipeline {
 
         stage('Construir y Levantar Servicios') {
             steps {
-                sh 'docker-compose down || true'
-                sh 'docker-compose pull'
-                sh 'docker-compose up -d'
+                sh 'docker compose down || true'
+                sh 'docker compose pull'
+                sh 'docker compose up -d'
             }
         }
 
