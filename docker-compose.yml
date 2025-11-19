@@ -13,6 +13,7 @@ services:
     depends_on:
       - db
     image: dpage/pgadmin4:6.17
+    user: "5050:5050"
     ports:
       - "9090:80"
     volumes:
@@ -25,3 +26,4 @@ services:
  # postgres-db:
 
   #  external: true
+
