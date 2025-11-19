@@ -1,7 +1,14 @@
-pipeline {
+pipeline { 
     agent any
 
     stages {
+
+        stage('Checkout del repositorio') {
+            steps {
+                checkout scm
+                sh "ls -la"
+            }
+        }
 
         stage('Construir y Levantar Servicios') {
             steps {
