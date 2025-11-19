@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clonar Repositorio') {
-            steps {
-                git branch: 'main', url: 'https://github.com/cristianrincon07/Proyecto-Integracion-Continua'
-            }
-        }
-
         stage('Construir y Levantar Servicios') {
             steps {
                 sh 'docker compose down || true'
