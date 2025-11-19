@@ -1,12 +1,12 @@
-pipeline { 
+pipeline {
     agent any
 
     stages {
 
-        stage('Checkout del repositorio') {
+        stage('Checkout') {
             steps {
                 checkout scm
-                sh "ls -la"
+                sh 'ls -la'
             }
         }
 
