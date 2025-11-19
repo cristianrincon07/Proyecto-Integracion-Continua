@@ -14,7 +14,7 @@ services:
       - db
     image: dpage/pgadmin4:6.17
     ports:
-      - "8080:80"
+      - "9090:80"
     volumes:
       - ./pgAdmin:/var/lib/pgadmin
     environment:
@@ -23,4 +23,5 @@ services:
 
 #volumes:
  # postgres-db:
+
   #  external: true
