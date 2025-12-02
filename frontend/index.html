@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Inventario - Supermercado de Verduras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="title">🥬 Supermercado Verde — Panel de Inventario</h1>
+  <nav class="menu">
+    <button id="view-inventory" class="menu-btn active">Inventario</button>
+    <button id="view-alerts" class="menu-btn">Alertas</button>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- Inventario -->
+  <section id="inventory-view" class="view">
+    <h2 class="subtitle">Inventario de productos frescos</h2>
+    <div class="grid" id="product-list"></div>
+  </section>
+
+  <!-- Alertas de bajo inventario -->
+  <section id="alerts-view" class="view hidden">
+    <h2 class="subtitle">Alertas de bajo inventario</h2>
+    <div id="alert-list"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <small>Inventario local — Datos simulados con localStorage</small>
+</footer>
+
+<!-- Templates -->
+<template id="product-card-template">
+  <article class="card">
+    <img class="product-img" src="" alt="">
+    <div class="card-body">
+      <h3 class="product-name"></h3>
+      <p class="product-desc"></p>
+
+      <div class="stock-box">
+        Stock actual: <strong class="stock-value">0</strong> unidades
+      </div>
+
+      <div class="actions">
+        <button class="btn entry">Entrada +</button>
+        <button class="btn exit">Salida -</button>
+      </div>
+    </div>
+  </article>
+</template>
+
+<template id="alert-item-template">
+  <div class="alert-item">
+    <div class="alert-text"></div>
+    <strong class="alert-stock"></strong>
+  </div>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
