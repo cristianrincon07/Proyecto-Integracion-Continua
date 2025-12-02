@@ -15,7 +15,7 @@ services:
     image: dpage/pgadmin4:6.17
     user: "5050:5050"
     ports:
-      - "9090:80"
+      - "8082:80"
     volumes:
       - ./pgAdmin:/var/lib/pgadmin
     environment:
@@ -35,6 +35,7 @@ services:
  # postgres-db:
 
   #  external: true
+
 
 
 
