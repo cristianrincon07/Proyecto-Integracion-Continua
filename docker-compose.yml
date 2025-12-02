@@ -27,6 +27,7 @@ services:
     container_name: inventario_verduras_frontend
     volumes:
       - /var/jenkins_home/workspace/Proyecto/frontend:/usr/share/nginx/html:ro
+      - /var/jenkins_home/workspace/Proyecto/frontend/nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
       - "8081:80"
 
@@ -34,5 +35,6 @@ services:
  # postgres-db:
 
   #  external: true
+
 
 
